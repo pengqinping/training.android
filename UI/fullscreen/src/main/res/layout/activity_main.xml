@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/titleHello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="Hello World!"/>
+
+    <Button
+            android:id="@+id/tvWindowFlag"
+            android:layout_width="match_parent"
+            android:text="@string/windowflag"
+            app:layout_constraintTop_toBottomOf="@id/titleHello"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/btnDecoerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/systemuivisibility"
+            app:layout_constraintTop_toBottomOf="@id/tvWindowFlag"/>
+
+    <Button
+            app:layout_constraintTop_toBottomOf="@id/btnDecoerView"
+            android:id="@+id/btnThemeFullScree"
+            android:layout_width="match_parent"
+            android:text="@string/themestyle"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            app:layout_constraintTop_toBottomOf="@id/btnThemeFullScree"
+            android:layout_width="match_parent"
+            android:text="常见场景 Guide 全屏"
+            android:id="@+id/btnOpenGuide"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            app:layout_constraintTop_toBottomOf="@id/btnOpenGuide"
+            android:layout_width="match_parent"
+            android:text="常见场景 动态显示状态栏"
+            android:id="@+id/btnFullPreview"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            app:layout_constraintTop_toBottomOf="@id/btnFullPreview"
+            android:layout_width="match_parent"
+            android:text="刘海屏兼容"
+            android:id="@+id/btnNotchCompat"
+            android:layout_height="wrap_content"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+include ':app'
+include ':app.push'
+// include base project
+include ':common_lib'
+project(':common_lib').projectDir = new File("../../android_common/common_lib")

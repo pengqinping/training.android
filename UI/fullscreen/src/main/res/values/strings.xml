@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">fullscreen</string>
+    <string name="windowflag">设置全屏，使用WindowFlag</string>
+    <string name="systemuivisibility">设置SystemUiVisibility</string>
+    <string name="set_full_screen_use_window_flag">修改WindowFlag</string>
+    <string name="set_layout_no_limit">Set Layout_No_Limit</string>
+    <string name="set_full_screen_use_windowattribute">修改WindowAttribute</string>
+    <string name="set_layout_no_limits">设置FLAG_LAYOUT_NO_LIMITS</string>
+    <string name="themestyle">设置全屏，使用 ThemeStyle</string>
+    <string name="flag_layout_in_screen">设置 FLAG_LAYOUT_IN_SCREEN</string>
+</resources>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:gravity="center"
+              android:orientation="vertical"
+              android:background="@android:color/holo_blue_dark"
+              tools:context=".MainActivity">
+    <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFlagTitle"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+    <Button
+            android:id="@+id/buttonSetFullScreenWithFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_full_screen_use_window_flag"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+            android:id="@+id/buttonSetFullScreenWithAttribute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/set_full_screen_use_windowattribute"
+            tools:layout_editor_absoluteX="148dp"
+            tools:layout_editor_absoluteY="189dp"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbWindowFlag"
+            android:text="@string/set_layout_no_limits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cbWindowFlagLayoutInScreen"
+            android:text="@string/flag_layout_in_screen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

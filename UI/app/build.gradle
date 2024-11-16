@@ -1,0 +1,60 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+apply from: '../../../android_common/config.gradle'
+android {
+    buildToolsVersion android.buildToolsVersion
+    compileSdkVersion android.compileSdkVersion
+    defaultConfig {
+        applicationId "com.twp.ui"
+        minSdkVersion android.minSdkVersion
+        targetSdkVersion android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+repositories {
+    flatDir {
+        dirs 'libs', '../../../android_common/common_lib/libs'
+    }
+    mavenCentral()
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation kotlin.stdlib
+    implementation androidx.appcompat
+    implementation androidx.core_ktx
+    implementation androidx.constraintlayout
+
+    testImplementation test.junit
+    androidTestImplementation androidTest.junit
+    androidTestImplementation androidTest.espresso_core
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+}
+
+task assembleCopy(dependsOn: build, type: Copy) {
+    println("name: ${project.name}")
+    from("build/outputs/apk/debug/${project.name}-debug.apk")
+    into("../dist/")
+}
+buildscript {
+    ext.kotlin_version = '1.5.20-M1'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout android:layout_width="match_parent" android:orientation="vertical"
+                  android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context=".MainActivity">
+
+            <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text=" View.SYSTEM_UI_FLAG_LAYOUT_STABLE //保持系统的稳定性 \n
+                .or(View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION)//隐藏导航栏的布局，但是SYSTEM_UI_FLAG_HIDE_NAVIGATION不设置不会生效 \n
+                .or(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)//隐藏号航栏  \n
+                .or(View.SYSTEM_UI_FLAG_IMMERSIVE)//沉浸式，会全屏  \n
+                .or(View.SYSTEM_UI_FLAG_FULLSCREEN) //全屏  \n
+                .or(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN)  \n
+               .or(View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY)//粘性沉浸式，下滑和上滑才能显示状态栏和导航栏  \n
+               .or(0x00200000 ) //隐藏导航栏的back键  \n
+               .or(0x00400000 )//隐藏导航栏的home键  \n
+               .or(0x01000000)//隐藏导航栏的recent键  \n"/>
+
+            <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                    android:text="Toggle"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagLayoutStable"
+                android:layout_width="wrap_content"
+                android:text="add SYSTEM_UI_FLAG_LAYOUT_STABLE"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagLayoutHideNavigation"
+                android:layout_width="wrap_content"
+                android:text="add SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION"
+                android:layout_height="wrap_content"
+        />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagHideNavigation"
+                android:layout_width="wrap_content"
+                android:text="add SYSTEM_UI_FLAG_HIDE_NAVIGATION"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagFullScreen"
+                android:layout_width="wrap_content"
+                android:text="add SYSTEM_UI_FLAG_FULLSCREEN"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagLayoutFullScreen"
+                android:layout_width="wrap_content"
+                android:text="add SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagImmersive"
+                android:layout_width="wrap_content"
+                android:text="add SYSTEM_UI_FLAG_IMMERSIVE"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagImmersiveSticky"
+                android:layout_width="wrap_content"
+                android:text="add SYSTEM_UI_FLAG_IMMERSIVE_STICKY"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagHideNavBack"
+                android:layout_width="wrap_content"
+                android:text="hide navigation back"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagHideNavHome"
+                android:layout_width="wrap_content"
+                android:text="hide navigation home"
+                android:layout_height="wrap_content"
+        />
+        <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/cbFlagHideNavRecent"
+                android:layout_width="wrap_content"
+                android:text="hide navigation recent"
+                android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
